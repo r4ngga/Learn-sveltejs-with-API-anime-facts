@@ -1,0 +1,14 @@
+[
+    {"id": 1, "url": "https://www.sanity.io/guides/svelte-sapper-blog-with-sanity", "title": "Svelte Tutorial: Make a blog with Sapper",
+    "description": "In this guide, you'll learn how to build a Markdown blog with Sapper, Svelte, and Sanity. To get up and running with this combination",
+    "creator": "Jacob Størdahl", "score": 40},
+    {"id": 2, "url": "https://blog.logrocket.com/how-to-build-simple-svelte-js-app", "title": "How to build a simple Svelte app",
+    "description": "In this article, well explore Svelte, which takes a different approach to constructing user interfaces. As an example, well build a bookstore app that keeps track of available book titles. Well also explore what sets Svelte apart from other framework",
+    "creator": "Obinna Ekwuno", "score": 30},
+    {"id": 3, "url": "https://www.sanity.io/guides/using-typescript-with-svelte", "title": "Why Typescript and Svelte are a match made in heaven",
+    "description": "Svelte is an emerging framework for building out front-end components with JavaScript, HTML, and CSS. It's pretty cool on its own, but it's made even more powerful with TypeScript. In this guide, we'll learn how TypeScript can make your Svelte apps more powerful, while adding confidence to the code you're putting in production",
+    "creator": "Sean C Davis", "score": 20},
+    {"id": 4, "url": "https://rizafahmi.com/2020/04/27/svelte/", "title": "Mengenal Svelte, Sebuah Komponen Framework",
+    "description": "Secara sederhana Svelte adalah sebuah framework JavaScript untuk menulis komponen antarmuka atau user interface. Namun, menurut Rich Harris, Svelte bukan hanya sekedar framework tapi lebih dari itu. Menurutnya Svelte adalah semacam compiler, maksudnya kode yang kita tulis di Svelte dikonversi menjadi JavaScript yang sudah dioptimasi.",
+    "creator": "Riza Fahmi", "score": 10}
+]
