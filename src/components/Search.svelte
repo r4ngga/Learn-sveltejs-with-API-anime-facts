@@ -9,8 +9,10 @@
         console.log("Form Appointment onDestroy");
     });
     export let addEntry;
-    
-    let search = "";
+    export let SearchEntry;
+    // export let search ;
+
+    let search = "" ;
     
     function handleSubmit(){
         event.preventDefault();
@@ -18,11 +20,7 @@
         // console.log({url, title, description, creator});
     
         addEntry({search});
-    
-        url = "";
-        title = "";
-        description = "";
-        creator = "";
+        SearchEntry({search});
         search = "";
     }
     </script>

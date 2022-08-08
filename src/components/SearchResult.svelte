@@ -1,64 +1,45 @@
 <script type="text/javascript">
     import {rest} from '../fetching.js';
-    import SearchResult from './SearchResult.svelte'; 
+    import Search from './Search.svelte';
     // import {restsearch} from '../fetching';
-
-        export let list;
-        export let entries;
-        export let display;
-        export let increment;
     
         function handleButton(){
             console.log("Can be click");
         }
-    
-        let newdatalength = [];
-    
-         function call(){
-            const data =  rest();
-            data.then(data => data.json()).then(data => {
-                newdatalength = data.data;
-            });
-            
-            return newdatalength;
+
+        let searchdataresult = [];
+
+        function searchresult(){
+            // const dataresult = restsearch();
+            let searchvalue;
+            const restsearch = () => {
+                return fetch('https://anime-facts-rest-api.herokuapp.com/api/v1/?'+searchvalue);
+            };
+            console.log(restsearch.data);
+            // let dataresult = restsearch.anime_name;
+            // dataresult.then()
         }
-       call();
+        searchresult();
+
+        
     </script>
-    
-    <!-- <div class="list-data">
-        {#each entries as entry}
-        <div class="item">
-            <span class="creator">{entry.score}</span>
-            <div class="content">
-                <span class="url-link"><a href="{entry.url}" target="_blank">{entry.title}</a></span>
-                <div class="description-data">
-                    {entry.description}
-                </div>
-                <div class="score-data">
-                    {entry.score}
-                </div>
-            </div>
-            <span class="increment"><button on:click={ () => increment(entry.id)}>UPVOTE</button></span>
-        </div>
-        {/each}
-    </div> -->
     
     <div class="list-data">
         <!-- {#if } -->
-        {#each newdatalength as entry}
+        
         <div class="item">
-            <span class="creator">{entry.anime_id}</span>
+            <span class="creator"></span>
             <div class="content">
                 <div class="description-data">
-                    {entry.anime_name}
+                   
                 </div>
                 <div class="show-image">
-                    <img class="images-display" src="{entry.anime_img}" alt="">
+                    <img class="images-display" src="" alt="">
                 </div>
             </div>
             
         </div>
-        {/each}
+        
     </div>
     
     <style>

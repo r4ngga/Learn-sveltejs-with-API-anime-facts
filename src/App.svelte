@@ -44,14 +44,30 @@
 		showForm = !showForm;
 	}
 
-	function addEntry({url, title, description, creator}){
-		// console.log({url, title, description, creator, score:0});
+	let resultlength = [];
+
+	function addEntry({search}){
+		console.log({search});
+		const searchvalue = search;
+		
+		const anime = "https://anime-facts-rest-api.herokuapp.com/api/v1/"+searchvalue;
+
+		fetch(anime).then(res => res.json()).then(response => {
+		// response is an object but we need the array in property data
+		const data = response.data;
+		for (let searchres of data) {
+				console.log(searchres);
+		}
+		// alternative
+		//data.forEach(item => console.log(item));
+		});
+
 		// cara lama ini
 		// entries.push({id: entries.length+1 , url, title, description, creator, score: 0});
 		// entries = entries;
 
 		//cara terbaru ES6
-		$entries = [...$entries, {id: $entries.length+1 , url, title, description, creator, score: 0}];
+		// $entries = [...$entries, {id: $entries.length+1 , url, title, description, creator, score: 0}];
 	}
 </script>
 
