@@ -1,30 +1,18 @@
 <script>
 	import Header from './components/Header.svelte';
-	import Search from './components/Search.svelte';
+	// import Search from './components/Search.svelte';
 	import List from './components/List.svelte';
-	// import New from './components/New.svelte';
+	import New from './components/New.svelte';
 	// import entries from './entries.json';
-	import {onMount, afterUpdate} from 'svelte';
-	import { store as entries} from './store.js';
-
-	onMount(function(){
-		// entries = $store;		 
-		// store.subscribe(function(value){
-		// 	entries = value;
-		// });
-		// entries = JSON.parse(localStorage.getItem("dataEntries")) || [];
-	});
-
-	afterUpdate(function(){
-		localStorage.setItem("dataEntries", JSON.stringify($entries));
-	});
 	
-	// export let entries;
+	export let entries;
 	export let nameheader;
 	// export let entries;
 	
 	// let entries = [];
 	let showForm = false;
+
+	// const entries = entry;
 
 	function increment(id){
         console.log(id);
@@ -62,7 +50,7 @@
 	<!-- <h1>Hello {name}</h1> -->
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 	{#if showForm}
-	<Search addEntry={addEntry}/>
+	<New addEntry={addEntry}/>
 	{/if}
 	<List entries = {$entries} display="" increment={increment}/>
 </main>
