@@ -8,18 +8,17 @@
     onDestroy(function(){
         console.log("Form Appointment onDestroy");
     });
-    export let addEntry;
-    export let SearchEntry;
+    // export let addEntry;
+     export let SearchEntry;
     // export let search ;
 
     let search = "" ;
     
     function handleSubmit(){
         event.preventDefault();
-        // reset form
-        // console.log({url, title, description, creator});
+        // reset form;
     
-        addEntry({search});
+        // addEntry({search});
         SearchEntry({search});
         search = "";
     }

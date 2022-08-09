@@ -2,12 +2,6 @@
     import {rest} from '../fetching.js';
     import SearchResult from './SearchResult.svelte'; 
     // import {restsearch} from '../fetching';
-
-        export let list;
-        export let entries;
-        export let display;
-        export let increment;
-    
         function handleButton(){
             console.log("Can be click");
         }
@@ -24,24 +18,6 @@
         }
        call();
     </script>
-    
-    <!-- <div class="list-data">
-        {#each entries as entry}
-        <div class="item">
-            <span class="creator">{entry.score}</span>
-            <div class="content">
-                <span class="url-link"><a href="{entry.url}" target="_blank">{entry.title}</a></span>
-                <div class="description-data">
-                    {entry.description}
-                </div>
-                <div class="score-data">
-                    {entry.score}
-                </div>
-            </div>
-            <span class="increment"><button on:click={ () => increment(entry.id)}>UPVOTE</button></span>
-        </div>
-        {/each}
-    </div> -->
     
     <div class="list-data">
         <!-- {#if } -->

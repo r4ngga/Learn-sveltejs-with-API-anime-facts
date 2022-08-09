@@ -1,25 +1,33 @@
 <script type="text/javascript">
     import {rest} from '../fetching.js';
-    import Search from './Search.svelte';
-    // import {restsearch} from '../fetching';
     
         function handleButton(){
             console.log("Can be click");
         }
 
-        let searchdataresult = [];
+        let resultlength = [];
 
-        function searchresult(){
-            // const dataresult = restsearch();
-            let searchvalue;
-            const restsearch = () => {
-                return fetch('https://anime-facts-rest-api.herokuapp.com/api/v1/?'+searchvalue);
-            };
-            console.log(restsearch.data);
-            // let dataresult = restsearch.anime_name;
-            // dataresult.then()
-        }
-        searchresult();
+        // function SearchEntry(search){
+        //     // const dataresult = restsearch();
+        //     // let searchvalue;
+        //     // const restsearch =  fetch('https://anime-facts-rest-api.herokuapp.com/api/v1/?'+searchvalue);
+        //     console.log({search});
+        //     const searchvalue = {search};
+            
+        //     const anime = "https://anime-facts-rest-api.herokuapp.com/api/v1/"+searchvalue;
+//  
+        //     fetch(anime).then(res => res.json()).then(response => {
+        //     // response is an object but we need the array in property data
+        //     const data = response.data;
+        //     for (let searchres of data) {
+        //         console.log(searchres);
+        //         resultlength = searchres;
+        //     }
+        //     return resultlength;
+		// // alternative
+		// //data.forEach(item => console.log(item));
+		// });
+        // }
 
         
     </script>
@@ -39,6 +47,7 @@
             </div>
             
         </div>
+        
         
     </div>
     
